@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ==========================================================================
+         META TAGS & TITLE
+         ========================================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cyphrixz's personal portfolio - C++ programmer and open source enthusiast">
+    <meta name="keywords" content="C++, programmer, portfolio, developer, open source">
+    <meta name="author" content="cyphrixz">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="cyphrixz | Programmer">
+    <meta property="og:description" content="Personal portfolio showcasing C++ projects">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Float314.github.io">
+    
+    <title>cyphrixz | Programmer</title>
+    
+    <!-- ==========================================================================
+         EXTERNAL RESOURCES
+         ========================================================================== -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨</text></svg>">
+</head>
+<body>
+    <!-- ======================================================================
+         CUSTOM CURSOR
+         ====================================================================== -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- ======================================================================
+         NAVIGATION BAR
+         ====================================================================== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-logo">
+                <span class="bracket">&lt;</span>cyphrixz<span class="bracket">/&gt;</span>
+            </a>
+            
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Social Links (Desktop) -->
+            <div class="nav-socials">
+                <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:cyphrixz@example.com" class="nav-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="nav-menu-mobile">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-socials mt-4">
+                <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:cyphrixz@example.com" class="nav-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <!-- Matrix Rain Effect Container -->
+            <div class="matrix-rain"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p class="hero-greeting fade-in">Welcome to my digital space</p>
+            <h1 class="hero-title fade-in fade-in-delay-1">
+                I'm <span class="name">cyphrixz</span>
+            </h1>
+            <p class="hero-tagline fade-in fade-in-delay-2">
+                <span class="typewriter-text" data-text="Programmer // C++ Enthusiast // Geode Modder" data-speed="80">Programmer // C++ Enthusiast // Geode Modder</span>
+                <span class="cursor"></span>
+            </p>
+            <div class="hero-buttons fade-in fade-in-delay-3">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">The person behind the code</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="fade-in fade-in-delay-1">
+                        Hey there! I'm cyphrixz, and I love C, and Geode Modding. Im just a 15 year old teenager who has an intrest in C++ and C.
+                    </p>
+                    <p class="fade-in fade-in-delay-2">
+                        I am an Indian Teenager and my 10th is going on (what shall i say?)
+                    </p>
+                    <p class="fade-in fade-in-delay-3">
+                        I believe in writing clean, maintainable code that not only works but is a joy to read. Every project is an opportunity to learn something new.
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="about-stats fade-in fade-in-delay-4">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1.5">0</span>
+                            <span class="stat-label">Years Coding C++</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="6">6</span>
+                            <span class="stat-label">Years for love of programming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Image -->
+                <div class="about-image fade-in fade-in-delay-2">
+                    <div class="about-image-frame">
+                        <img src="https://placehold.co/400x500/1a1a1a/00ff88?text=cyphrixz" alt="cyphrixz profile picture">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="skills-section fade-in">
+                <h3 class="mb-4">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <ul class="skill-list">
+                            <li class="skill-item">C / C++</li>
+                            <li class="skill-item">Python (barely, its a school subject)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Areas of Interest/Currently Learning</h4>
+                        <ul class="skill-list">
+                            <li class="skill-item">Game Development</li>
+                            <li class="skill-item">Geometry Dash Modding (Geode)</li>
+                            <li class="skill-item">Raylib C++</li>
+                            <li class="skill-item">Unity (Game Development, looking forward to it after 10th Grade)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SECTION
+         ====================================================================== -->
+    <section id="projects" class="section" style="background-color: var(--color-bg-secondary);">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A glimpse into my work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Featured Project -->
+                <div class="project-card project-featured fade-in">
+                    <div class="project-image">
+                        <img src="https://placehold.co/800x400/0a0a0a/00ff88?text=GlobalText+API" alt="Neon Engine - 2D Game Engine" data-lightbox="https://placehold.co/800x400/0a0a0a/00ff88?text=Game+Engine">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Float314/GlobalText-API" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Global Text API</h3>
+                        <p class="project-description">
+                            An API For Geode Mods to Render Devanagari, Hebrew and Arabic Text using CCSprite. Releasing soon! (need help)
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Geode</span>
+                            <span class="project-tag">Modification</span>
+                            <span class="project-tag">QoL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <!--
+                <div class="project-card fade-in fade-in-delay-1">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x300/1a1a1a/00ff88?text=CLI+Tools" alt="SysUtil - System Utilities" data-lightbox="https://placehold.co/600x300/1a1a1a/00ff88?text=CLI+Tools">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cyphrixz/sysutil" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SysUtil</h3>
+                        <p class="project-description">
+                            A collection of cross-platform system utilities written in Rust. Includes file synchronization, process monitoring, and network diagnostics tools.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Rust</span>
+                            <span class="project-tag">CLI</span>
+                            <span class="project-tag">Cross-platform</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                Proj card 3
+                <div class="project-card fade-in fade-in-delay-2">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x300/1a1a1a/00ff88?text=CryptLib" alt="CryptLib - Cryptography Library" data-lightbox="https://placehold.co/600x300/1a1a1a/00ff88?text=CryptLib">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cyphrixz/cryptlib" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CryptLib</h3>
+                        <p class="project-description">
+                            A cryptography library implementing modern encryption algorithms from scratch. Features AES, ChaCha20, and various hash functions with detailed documentation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">C++</span>
+                            <span class="project-tag">Security</span>
+                            <span class="project-tag">Cryptography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        -->
+            
+
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         QUICK LINKS SECTION
+         ====================================================================== -->
+    <section class="section">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Explore More</h2>
+                <p class="section-subtitle">Where would you like to go?</p>
+            </div>
+            
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-3 fade-in fade-in-delay-3">
+                    <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="text-decoration-none">
+                        <div class="stat-item" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                            <i class="fab fa-github" style="font-size: 2.5rem; color: var(--color-accent-primary); margin-bottom: 1rem;"></i>
+                            <span style="font-family: var(--font-primary); font-size: 1.25rem; color: var(--color-text-primary);">GitHub</span>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem;">Browse all projects</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 fade-in fade-in-delay-4">
+                    <a href="#contact" class="text-decoration-none">
+                        <div class="stat-item" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                            <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--color-accent-primary); margin-bottom: 1rem;"></i>
+                            <span style="font-family: var(--font-primary); font-size: 1.25rem; color: var(--color-text-primary);">Contact</span>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.5rem;">Get in touch</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact" class="section" style="background-color: var(--color-bg-secondary);">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Want to collaborate? Lets Talk!</p>
+            </div>
+            
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info fade-in fade-in-delay-1">
+                    <h3>Contact Information</h3>
+                    
+                    <!--
+                    Email
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>LaImale@gmail.com</p>
+                        </div>
+                    </div>
+                -->
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>GitHub</h4>
+                            <p>Float314</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Twitter</h4>
+                            <p>@cyphrixz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <a href="https://github.com/Float314" target="_blank" rel="noopener" class="contact-social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="contact-social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://discord.gg/DeEgf65mBv" target="_blank" rel="noopener" class="contact-social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copyright">
+                &copy; 2026 <span>cyphrixz</span>. All rights reserved.
+            </p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:cyphrixz@example.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================================
+         BACK TO TOP BUTTON
+         ====================================================================== -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ======================================================================
+         LIGHTBOX MODAL
+         ====================================================================== -->
+    <div class="lightbox" role="dialog" aria-label="Image lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Lightbox image" class="lightbox-image">
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         SCRIPTS
+         ====================================================================== -->
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
