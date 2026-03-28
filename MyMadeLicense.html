@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cyphrixz's Custom License - A simple permissive license">
+    <meta name="keywords" content="license, open source, custom license">
+    <meta name="author" content="cyphrixz">
+    
+    <title>cyphrixz License | Custom License</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨</text></svg>">
+    
+    <style>
+        .license-page {
+            padding-top: calc(var(--nav-height) + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            min-height: 100vh;
+        }
+        
+        .license-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .license-header h1 {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .license-description {
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .license-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .license-column {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-lg);
+        }
+        
+        .license-column h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .license-column.permissions h3 { color: var(--color-accent-primary); }
+        .license-column.conditions h3 { color: #ffaa00; }
+        .license-column.limitations h3 { color: #ff4444; }
+        
+        .license-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .license-list li {
+            padding: var(--spacing-sm) 0;
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .license-list li .icon {
+            font-size: 1rem;
+        }
+        
+        .license-list li .check { color: var(--color-accent-primary); }
+        .license-list li .info { color: #ffaa00; }
+        .license-list li .cross { color: #ff4444; }
+        
+        .license-text-container {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .license-text-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-bottom: 1px solid var(--color-border);
+            background-color: var(--color-bg-tertiary);
+        }
+        
+        .license-text-header h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .copy-btn {
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: transparent;
+            border: 1px solid var(--color-accent-primary);
+            color: var(--color-accent-primary);
+            cursor: pointer;
+            transition: var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .copy-btn:hover {
+            background-color: var(--color-accent-primary);
+            color: var(--color-bg-primary);
+        }
+        
+        .license-text {
+            padding: var(--spacing-lg);
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            color: var(--color-text-secondary);
+        }
+        
+        .license-section {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .license-section h3 {
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+        
+        .license-section p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .license-section ul {
+            color: var(--color-text-muted);
+            padding-left: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        
+        .license-section li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .license-link {
+            color: var(--color-accent-primary);
+            text-decoration: none;
+        }
+        
+        .license-link:hover {
+            text-decoration: underline;
+        }
+        
+        .spdx-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-md);
+            color: var(--color-accent-primary);
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+        }
+        
+        .spdx-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 992px) {
+            .license-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="bracket">&lt;</span>cyphrixz<span class="bracket">/&gt;</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="MyMadeLicense.html" class="nav-link active">My License</a></li>
+            </ul>
+            
+            <div class="nav-socials">
+                <a href="https://github.com/float314" target="_blank" rel="noopener" class="nav-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <div class="nav-menu-mobile">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="MyMadeLicense.html" class="nav-link active">My License</a>
+            <div class="nav-socials mt-4">
+                <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="nav-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:cyphrixz@example.com" class="nav-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="license-page">
+        <div class="section-container">
+            <div class="license-header fade-in">
+                <h1>cyphrixz License</h1>
+                <p class="license-description">
+                    A long article where it mentions what to do and what not. I made this simple enough to read (well it is long) 
+                </p>
+            </div>
+            
+            <div class="license-columns fade-in fade-in-delay-1">
+                <div class="license-column permissions">
+                    <h3><i class="fas fa-check-circle"></i> Permissions</h3>
+                    <ul class="license-list">
+                        <li><span class="icon check"><i class="fas fa-check"></i></span> Commercial use</li>
+                        <li><span class="icon check"><i class="fas fa-check"></i></span> Distribution</li>
+                        <li><span class="icon check"><i class="fas fa-check"></i></span> Modification</li>
+                        <li><span class="icon check"><i class="fas fa-check"></i></span> Private use</li>
+                    </ul>
+                </div>
+                
+                <div class="license-column conditions">
+                    <h3><i class="fas fa-info-circle"></i> Conditions</h3>
+                    <ul class="license-list">
+                        <li><span class="icon info"><i class="fas fa-exclamation"></i></span> License and copyright notice</li>
+                        <li><span class="icon info"><i class="fas fa-exclamation"></i></span> Not very useful in courts</li>
+                        <li><span class="icon info"><i class="fas fa-exclamation"></i></span> Open sourcing of Modified version of same software </li>
+                        <li><span class="icon info"><i class="fas fa-exclamation"></i></span> CREDITS AND ATTRIBUTION!!!!</li>
+                    </ul>
+                </div>
+                
+                <div class="license-column limitations">
+                    <h3><i class="fas fa-times-circle"></i> Limitations</h3>
+                    <ul class="license-list">
+                        <li><span class="icon cross"><i class="fas fa-times"></i></span> Liability</li>
+                        <li><span class="icon cross"><i class="fas fa-times"></i></span> Warranty</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="license-text-container fade-in fade-in-delay-2">
+                <div class="license-text-header">
+                    <h3>cyphrixz License</h3>
+                    <button class="copy-btn" onclick="copyLicense()">
+                        <i class="fas fa-copy"></i> Copy license text
+                    </button>
+                </div>
+                <pre class="license-text">cyphrixz License
+    Very Long Article-type License
+
+This license was created by me and ChatGPT.
+but somewhere between the first draft and this version, we wandered off to think 
+about the lifespan of mayflies and whether clouds ever feel tired. Still, here we are,
+telling you that we don’t give you any warranty or that we aren't liable for any 
+damages that arrive from our software, and we certainly don’t remember your face—unless
+you look like a Google Analytics graph, in which case we might glance briefly before 
+forgetting again. Speaking of faces, did you know goats have rectangular pupils?
+
+A warranty is basically a developer saying, “If this thing breaks, I’ve got your back,”
+which sounds nice until you remember software is held together by late-night decisions and
+vibes; so most licenses politely avoid that commitment and go with “as is,” meaning you get
+the software in whatever mysterious state it currently exists—working, broken, or philosophically
+confused—because guaranteeing it would mean promising control over every computer, setup, and
+chaotic user choice on Earth, which is about as realistic as guaranteeing your code won’t suddenly
+fail right before a demo; so instead of signing up for that level of responsibility, developers
+hand it over with a quiet shrug and a legal sentence that translates to, “good luck, and may the
+bugs be ever in your favor.”
+
+“No liability” is the even more dramatic cousin of “no warranty,” where the developer gently but
+firmly declares, “If this software ruins your day, your files, or somehow your entire week, that’s...
+not on me,” because once code leaves their hands it enters a wild ecosystem of strange devices, cursed
+configurations, and users who click things with confidence but no context; taking responsibility for
+all possible outcomes would mean being legally tied to every glitch, crash, or unexpected chaos event,
+which is less “writing code” and more “signing up to be blamed for the universe,” so licenses include
+no liability as a kind of protective spell—handing you the software like a mysterious artifact and quietly
+adding, “use it wisely, because if it turns your project into modern art, we were never here.”
+
+And while I was writing this document, I somehow ended up hearing about Yakutsk, which feels like the kind
+of place that appears in your thoughts uninvited and refuses to leave. No wonder gold attracts people—something
+about discoveries in the South Sakha Region makes it all sound like a story waiting to happen. It’s strange 
+how a single place name can spiral into curiosity, then into maps, then into quiet dreams. One moment you’re
+writing something serious, and the next you’re imagining snow, distance, and a completely different life. The
+mind wanders, and suddenly Yakutsk isn’t just a place—it’s an idea that lingers.
+
+I want to travel there, honestly, and not just there but everywhere that manages to spark even a little curiosity
+like this. There’s something endlessly tempting about seeing places you’ve only heard of in passing, like collecting
+fragments of the world firsthand. But then reality shows up, wearing the very official disguise of visa costs and
+practical limits. For a middle-class family, those prices don’t just sit quietly—they stand in the way like an unskippable 
+cutscene. So the dreams stay where they are for now, half-planned and half-imagined, waiting for a time when borders
+feel a little less expensive.
+
+Back to my document, this software comes with absolutely no guarantees whatsoever, as you may have already suspected. 
+It exists in its current form, doing whatever it decides to do on any given day. And as mentioned above, there is no
+liability here—none at all, not even by accident. If something goes wrong, it’s just one of those moments where reality
+shrugs and moves on.
+
+Also a recap, “no liability” definitely doesn’t mean you get a free pass to go make a virus—that’s
+very much still a terrible idea with real consequences. Speaking of viruses, did you know about WannaCry
+ransomware attack, which spread across the world and locked people out of their own computers, hitting hospitals,
+businesses, and governments and causing massive disruption and financial damage. It basically held systems hostage
+until payments were made, which is about as chaotic as software gets. No wonder mankind has a habit of building things
+that can go from clever to catastrophic real fast.
+
+Why does mankind make software that steals data? Honestly, most of the time it comes down to money, power,
+or both—data can be sold, used for scams, targeted ads, identity theft, or even corporate spying, 
+so for some people it’s just an easy (and illegal) way to profit. I don’t have any interest in 
+stealing other people’s data either, and yeah, in fields like AI, data *is* needed to train models—but 
+that’s usually supposed to be collected legally and ethically, not grabbed in shady ways. The confusion 
+comes from the fact that even companies not focused on AI still want data because it helps them understand
+users, improve products, personalize content, and, most importantly, make more money through advertising or 
+analytics. So while “train AI” is one reason, the bigger picture is that data has basically become one of 
+the most valuable resources in the digital world—and wherever something is valuable, some people will try 
+to get it the wrong way.
+
+Going back to the main topic, you aren’t allowed to distribute a closed-source version of this
+code, and that part is very much intentional. Open-source developers don’t spend hours debugging, 
+building, and refining something just to watch it get locked up behind a corporate wall. It’s less 
+about control and more about basic respect for the work that went into it. Nobody wants their blood
+and sweat repackaged, rebranded, and sold without giving anything back. So this rule exists to make 
+sure the effort stays open and doesn’t get quietly turned into someone else’s private asset.
+
+Capitalism in the open-source world shouldn’t be allowed, at least not in the way it tries to
+turn everything into profit first and purpose second. Open source was meant to be simple: 
+share knowledge, improve together, and let ideas flow freely without a price tag slapped on 
+every corner. When money becomes the main focus, that simplicity starts to fade, and collaboration 
+turns into quiet competition. Sure, capitalism works in countries where economies need structure 
+and growth, but in tech spaces built on openness, it often feels out of place. Instead of 
+encouraging contribution, it can shift the mindset toward ownership and control.
+
+As it stands, we’ve reached a point where developers are reverse-engineering things just to understand 
+or make systems work better together. Some people say that’s illegal, but in many cases it feels 
+more like solving a tough math problem than committing a crime. It’s curiosity mixed with necessity, 
+especially when documentation is missing or intentionally hidden. Comparing it to 9th or 10th grade 
+math isn’t that far off—it’s about breaking things down and figuring out how they work. The real issue 
+isn’t the act itself, but where the line is drawn between learning and misuse, and that line isn’t 
+always as clear as people pretend it is.
+
+But that doesn’t mean you yourself can’t distribute programs—you absolutely can, and that’s
+kind of the point. If you don’t feel like putting in too much effort on promotion, you can
+even lean on something like Google Ads to do the heavy lifting. You can earn money from your program
+while letting ads bring in users, even if it feels like taking the easy route. Of course, that also 
+means giving a cut of your earnings to the platform running those ads. In the end, it becomes a 
+trade-off where you gain reach and potential income, while they gain data and revenue from your spending.
+
+Changes in this document are expected, and if they occur, we’ll include a version number to keep things
+clear and organized. We will not collect or steal user data, simply because we have no interest in doing so.
+In the open-source world, transparency is a core idea, so any data-related behavior would be visible to 
+everyone anyway.That said, open source doesn’t automatically mean zero data collection—it just means 
+nothing is hidden.The goal here is to stay transparent, minimal, and respectful of user trust.
+
+Written with absolute honesty, mild confusion, and a quiet sense of amusement by ChatGPT. This document is,
+without a doubt, incredibly useful—at least in spirit, if nothing else. And so, with this, I say goodbye
+and wish you happy developing. May your journey be successful, and when dismotivation hits (because it will),
+find a way to push yourself forward again. Keep building, keep learning, and don’t let the bugs win.
+
+Note that this document isn’t crafted by a team of highly paid legal professionals, but rather a small,
+simple piece put together with the help of ChatGPT. It’s meant to be clear and understandable, not legally
+intimidating or overly complex. So, please don’t treat it like a courtroom-grade contract or go after the
+writer over technicalities. Everything has been explained as clearly as possible (for now), with the intent
+of being fair and transparent. If any issues come up, feel free to reach out to me (cyphrixz).
+
+Happy Developing! 
+
+========================================END OF DOCUMENT=====================================================
+
+
+How to include this document in your project - 
+
+Just Copy+Paste into license or license.txt . 
+Maybe add a command line command like `[ program_name ] show --license` or just anything that will work. Fine 
+with me. 
+
+Add the link `https://float314.github.io/MyMadeLicense` somewhere idk. 
+
+ok thats all, bye.
+
+Inspired by https://undefined0.dev/privacy-policy
+                </pre>
+            </div>
+            
+            <div class="license-section fade-in fade-in-delay-3">
+                <h3>How to apply this license</h3>
+                <p>Create a text file (typically named LICENSE or LICENSE.txt) in the root of your source code and copy the text of the license into the file.</p>
+
+                <br> 
+                <p>Maybe add a command line command like `[ program_name ] show --license` or just anything that will work. Fine 
+                with me. </p>
+                
+            </div>
+            
+            <div class="license-section fade-in fade-in-delay-4">
+                <h3>About this license</h3>
+                <p>
+                    This license is inspired by Undefined0's "privacy policy".  It's designed to be simple, 
+                    permissive, and easy to understand while providing basic protection for the author.
+                </p>
+                <p>
+                    The cyphrixz License allows you to use, modify, and distribute this software for any purpose, 
+                    commercial or non-commercial, as long as you include the original copyright notice, and dont claim
+                    that the entire software is yours. 
+                </p>
+                <p>
+                    It DOESN'T ALLOW OTHERS TO DISTRIBUTE CLOSED SOURCE SOFTWARE TO OTHERS!!!!
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copyright">
+                &copy; 2026 <span>cyphrixz</span>. All rights reserved.
+            </p>
+            
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="MyMadeLicense.html" class="footer-link">License</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com/cyphrixz" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/cyphrixz" target="_blank" rel="noopener" class="footer-social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:cyphrixz@example.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        function copyLicense() {
+            const licenseText = `cyphrixz License
+
+Copyright (c) 2026 cyphrixz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`;
+            
+            navigator.clipboard.writeText(licenseText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.backgroundColor = 'var(--color-accent-primary)';
+                btn.style.color = 'var(--color-bg-primary)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
