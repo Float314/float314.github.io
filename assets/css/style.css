@@ -724,6 +724,12 @@ a:hover {
     gap: var(--spacing-lg);
 }
 
+.projects-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
 .project-card {
     background-color: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
@@ -846,6 +852,23 @@ a:hover {
 
 .project-featured .project-description {
     font-size: 1rem;
+}
+
+.projects-stacked .project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects-stacked .project-card .project-image {
+    height: 100%;
+    min-height: 250px;
+}
+
+.projects-stacked .project-card .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-xl);
 }
 
 /* ==========================================================================
